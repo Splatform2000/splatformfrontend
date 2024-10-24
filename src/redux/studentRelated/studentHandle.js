@@ -11,7 +11,7 @@ export const getAllStudents = (id) => async (dispatch) => {
     dispatch(getRequest());
 
     try {
-        const result = await axios.get(`http://localhost:5000/Students/${id}`);
+        const result = await axios.get(`https://splatformbackend.onrender.com/Students/${id}`);
         if (result.data.message) {
             dispatch(getFailed(result.data.message));
         } else {
@@ -26,7 +26,7 @@ export const updateStudentFields = (id, fields, address) => async (dispatch) => 
     dispatch(getRequest());
 
     try {
-        const result = await axios.put(`http://localhost:5000/${address}/${id}`, fields, {
+        const result = await axios.put(`https://splatformbackend.onrender.com/${address}/${id}`, fields, {
             headers: { 'Content-Type': 'application/json' },
         });
         if (result.data.message) {
@@ -43,7 +43,7 @@ export const removeStuff = (id, address) => async (dispatch) => {
     dispatch(getRequest());
 
     try {
-        const result = await axios.put(`http://localhost:5000/${address}/${id}`);
+        const result = await axios.put(`https://splatformbackend.onrender.com/${address}/${id}`);
         if (result.data.message) {
             dispatch(getFailed(result.data.message));
         } else {

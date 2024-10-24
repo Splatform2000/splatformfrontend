@@ -11,7 +11,7 @@ import {
 } from './feeSlice';
 
 // Base URL for API
-const API_URL = 'http://localhost:5000/fees';
+const API_URL = 'https://splatformbackend.onrender.com/fees';
 
 // Fetch all fees using Axios
 export const fetchFees = async () => {

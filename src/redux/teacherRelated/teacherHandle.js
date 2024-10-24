@@ -12,7 +12,7 @@ export const getAllTeachers = (id) => async (dispatch) => {
     dispatch(getRequest());
 
     try {
-        const result = await axios.get(`http://localhost:5000/Teachers/${id}`);
+        const result = await axios.get(`https://splatformbackend.onrender.com/Teachers/${id}`);
         if (result.data.message) {
             dispatch(getFailed(result.data.message));
         } else {
@@ -27,7 +27,7 @@ export const getTeacherDetails = (id) => async (dispatch) => {
     dispatch(getRequest());
 
     try {
-        const result = await axios.get(`http://localhost:5000/Teacher/${id}`);
+        const result = await axios.get(`https://splatformbackend.onrender.com/Teacher/${id}`);
         if (result.data) {
             dispatch(doneSuccess(result.data));
         }
@@ -40,7 +40,7 @@ export const updateTeachSubject = (teacherId, teachSubject) => async (dispatch) 
     dispatch(getRequest());
 
     try {
-        await axios.put(`http://localhost:5000/TeacherSubject`, { teacherId, teachSubject }, {
+        await axios.put(`https://splatformbackend.onrender.com/TeacherSubject`, { teacherId, teachSubject }, {
             headers: { 'Content-Type': 'application/json' },
         });
         dispatch(postDone());
