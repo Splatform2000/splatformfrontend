@@ -218,9 +218,9 @@ const LoginPage = ({ role }) => {
                                     control={<Checkbox value="remember" color="primary" />}
                                     label="Remember me"
                                 />
-                                <StyledLink href="#">
+                                {/* <StyledLink href="#">
                                     Forgot password?
-                                </StyledLink>
+                                </StyledLink> */}
                             </Grid>
                             <LightPurpleButton
                                 type="submit"
